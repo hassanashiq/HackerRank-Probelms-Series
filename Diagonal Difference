@@ -1,0 +1,15 @@
+def diagonalDifference(arr):
+    # Write your code here
+    n = len(arr)
+    diagonal_element = []
+    anti_diagnol_element = []
+    for i in range(n):
+        for j in range(n):
+            if (i==j):
+                diagonal_element.append(arr[i][j])
+                anti_diagnol_element.append(arr[i][n-1-i])
+    
+    diagnol_sum = sum(diagonal_element)
+    anti_diagnol_sum = sum(anti_diagnol_element)
+    
+    return abs( diagnol_sum - anti_diagnol_sum )
